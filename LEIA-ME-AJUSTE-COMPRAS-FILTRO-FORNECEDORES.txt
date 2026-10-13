@@ -1,0 +1,16 @@
+AJUSTE V03 - TELA DE COMPRAS
+
+Alteracao:
+- O campo "O que foi comprado?" aparece primeiro.
+- Ao selecionar Produto para Venda, a lista de itens mostra somente produtos ativos e a lista de fornecedores mostra somente fornecedores ativos classificados como PRODUTO ou AMBOS.
+- Ao selecionar Material de Uso, a lista de itens mostra somente materiais ativos e a lista de fornecedores mostra somente fornecedores ativos classificados como MATERIAL ou AMBOS.
+- Ao trocar o tipo da compra, item e fornecedor são atualizados e as selecoes anteriores sao limpas para evitar combinacoes inconsistentes.
+- Na edicao de compra, tipo, item e fornecedor existentes sao pre-selecionados quando compativeis.
+- O controlador ja valida no servidor se o fornecedor esta ativo e se sua classificacao e compativel com o tipo de compra.
+
+Banco de dados:
+- Nenhuma alteracao de estrutura SQL necessaria.
+
+Validacao realizada:
+- Sintaxe PHP validada em compras.php e controllers/compras_vendas_controller.php.
+- Teste funcional completo depende da execucao no XAMPP com o banco de dados conectado.
