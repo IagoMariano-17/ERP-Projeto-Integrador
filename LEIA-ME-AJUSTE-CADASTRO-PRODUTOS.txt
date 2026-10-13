@@ -1,0 +1,18 @@
+AJUSTE V03 — CADASTRO DE PRODUTOS E MATERIAIS
+
+Alterações realizadas
+- Adicionado acesso Produtos no menu lateral, direcionando ao cadastro unificado.
+- O formulário permite escolher Produto para Venda ou Material de Uso e exibe somente os campos pertinentes.
+- A lista de fornecedores é filtrada por tipo e situação: fornecedores ativos PRODUTO/AMBOS para produtos de venda; MATERIAL/AMBOS para materiais de uso. A mesma regra é validada no servidor.
+- Produto de venda: código obrigatório, SKU opcional, nome, unidade, fornecedor, custo, preço de venda e estoque mínimo local.
+- Material de uso: código opcional, nome, unidade, fornecedor e estoque mínimo.
+- Removidos do cadastro os estoques iniciais local/Mercado Livre, o estoque mínimo Mercado Livre e o estoque atual inicial dos materiais.
+- Não há campos de data da compra, volume médio diário ou local principal de venda neste formulário.
+- O cadastro inicia as quantidades em zero; os saldos devem ser atualizados pelas telas operacionais de compras, inventário, vendas, consumo e transferências.
+
+Banco de dados
+- A análise do dump SQL V03 confirma que as tabelas produtos, suprimentos e fornecedores já possuem os campos necessários.
+- Não é necessária migração de esquema para este ajuste. Os campos existentes estoque_minimo_mercado_livre e estoque_atual são mantidos para os módulos que os utilizam; apenas deixaram de ser preenchidos no cadastro inicial.
+
+Observação
+- O arquivo SQL enviado para análise é um dump com dados reais/de teste e não foi incluído neste ZIP. Não importe novamente o dump para aplicar esta alteração.
